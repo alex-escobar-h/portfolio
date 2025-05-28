@@ -18,7 +18,7 @@ export default function ShowcaseItem({
   return (
     <article className='grid grid-cols-12 gap-2 md:gap-4'>
       {/* IDX start ======================= */}
-      <span className='text-start text-xs font-mono font-light text-base-content-100/90 lg:text-sm'>
+      <span className='text-start text-xs font-mono font-light text-accent/80 lg:text-sm'>
         ({formatID(id)})
       </span>
       {/* IDX end ========================= */}
@@ -35,7 +35,7 @@ export default function ShowcaseItem({
         {/* Overview start ======================= */}
         <div className='col-span-full md:col-span-6 md:row-span-4'>
           <h4 className='font-medium text-base-content-100/90'>Overview:</h4>
-          <p className='text-base-content-100/70 text-sm md:max-w-[45ch]'>
+          <p className='text-base-content-100/60 text-sm md:max-w-[45ch]'>
             {overview}
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function ShowcaseItem({
             {normalizedStack.map((stk, idx) => (
               <li
                 key={idx}
-                className='text-base-content-100/80 text-sm px-1 py-0.5 rounded-xs'
+                className='text-base-100/80 text-sm px-1 py-0.5 rounded-xs bg-accent/80'
               >
                 {stk}
               </li>
@@ -70,9 +70,12 @@ export default function ShowcaseItem({
                   href={link.url}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-sm text-base-content-100/70 underline underline-offset-2'
+                  className='text-sm text-base-content-100/70'
                 >
-                  {link.label}
+                  <span className='underline underline-offset-2'>
+                    {link.label}
+                  </span>
+                  <span className='no-underline inline-block px-0.5'>↗</span>
                 </a>
               </li>
             ))}

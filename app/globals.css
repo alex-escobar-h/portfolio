@@ -1,36 +1,36 @@
 @import "tailwindcss";
 :root {
   /* Colors */
-  --black-1: #0f0f0f;
-  --black-2: #191b20;
-  --black-3: #3f3f3f;
+  --black-1: #141414;
+  --black-2: #0e100f;
+  --black-3: hsl(0, 0%, 40%);
+  --green-1: #4f7d73;
+  --white-1: #fffce1;
+  --white-2: hsl(210, 17%, 89%);
+  --white-3: hsl(210, 17%, 80%);
 
-  --green-1: hsl(166, 23%, 40%);
-
-  --white-1: hsl(166, 23%, 95%);
-  --white-2: #cccab4;
-  --white-3: #999787;
-
-  --pink-1: #fec5fb;
+  --gold-1: hsl(45, 100%, 68%);
+  --red-1: #df817a;
 
   /* Theme variables */
-  --base-100: var(--white-1);
-  --base-200: var(--white-2);
-  --base-300: var(--white-3);
-  --base-content-100: var(--black-1);
-  --base-content-200: var(--black-2);
-  --base-content-300: var(--black-3);
-  --accent: var(--pink-1);
-}
 
-[data-theme="light"] {
   --base-100: var(--black-1);
   --base-200: var(--black-2);
   --base-300: var(--black-3);
   --base-content-100: var(--white-1);
   --base-content-200: var(--white-2);
   --base-content-300: var(--white-3);
-  --accent: var(--pink-1);
+  --accent: var(--red-1);
+}
+
+[data-theme="dark"] {
+  --base-100: var(--white-1);
+  --base-200: var(--white-2);
+  --base-300: var(--white-3);
+  --base-content-100: var(--black-1);
+  --base-content-200: var(--black-2);
+  --base-content-300: var(--black-3);
+  --accent: var(--red-1);
 }
 
 @theme {
@@ -75,6 +75,14 @@ html {
     display: flex;
     flex-direction: column;
     gap: clamp(3rem, 1.7647rem + 5.6471vw, 6rem);
+  }
+  .pt-section {
+    padding-top: clamp(4rem, 2.3529rem + 7.5294vw, 8rem);
+  }
+
+  .py-section {
+    padding-top: clamp(4rem, 2.3529rem + 7.5294vw, 8rem);
+    padding-bottom: clamp(2rem, 1.1765rem + 3.7647vw, 4rem);
   }
 }
 
