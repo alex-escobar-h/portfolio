@@ -3,48 +3,15 @@ import { useEffect, useRef } from "react";
 
 const colorPalettes = [
   [
-    "hsl(50, 60%, 64%)",
-    "hsl(50, 60%, 54%)",
-    "hsl(50, 60%, 44%)",
-    "hsl(50, 60%, 34%)",
-    "hsl(50, 60%, 24%)",
-    "hsl(50, 60%, 14%)",
-    "hsl(50, 60%, 4%)",
+    "hsl(90, 5%, 65%)",
+    "hsl(90, 5%, 58%)",
+    "hsl(90, 5%, 52%)",
+    "hsl(90, 5%, 46%)",
+    "hsl(90, 5%, 40%)",
+    "hsl(90, 5%, 35%)",
+    "hsl(90, 5%, 15%)",
   ],
 ];
-// const colorPalettes = [
-//   [
-//     "hsl(258, 19%, 67%)",
-//     "hsl(258, 19%, 57%)",
-//     "hsl(258, 19%, 47%)",
-//     "hsl(258, 19%, 37%)",
-//     "hsl(258, 19%, 27%)",
-//     "hsl(258, 19%, 17%)",
-//     "hsl(258, 19%, 7%)",
-//   ],
-//   [
-//     "hsl(228, 19%, 67%)",
-//     "hsl(228, 19%, 57%)",
-//     "hsl(228, 19%, 47%)",
-//     "hsl(228, 19%, 37%)",
-//     "hsl(228, 19%, 27%)",
-//     "hsl(228, 19%, 17%)",
-//     "hsl(228, 19%, 7%)",
-//   ],
-//   ["#a27ea1", "#8e6f8d", "#7a5f79", "#664f65", "#513f50", "#3d2f3c", "#292028"],
-//   [
-//     "hsl(34, 64%, 68%)",
-//     "hsl(34, 64%, 58%)",
-//     "hsl(34, 64%, 44%)",
-//     "hsl(34, 64%, 33%)",
-//     "hsl(34, 64%, 28%)",
-//     "hsl(34, 64%, 18%)",
-//     "hsl(34, 64%, 8%)",
-//   ],
-//   ["#c7851a", "#ae7416", "#956413", "#7d5310", "#64420d", "#4b320a", "#322106"],
-//   ["#7cb900", "#6ea500", "#619000", "#537c00", "#456700", "#375200", "#293e00"],
-//   ["#693acc", "#5c32b3", "#4f2b99", "#422480", "#341d66", "#27164c", "#1a0e33"],
-// ];
 
 const rectangleMap = [
   { idx: 1, xFactor: 1, yFactor: 1 },
@@ -58,16 +25,17 @@ const rectangleMap = [
 
 export default function NestedRectanglesCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const paletteRef = useRef(
-    colorPalettes[Math.floor(Math.random() * colorPalettes.length)]
-  );
+  const paletteRef = useRef(colorPalettes[0]);
+  // const paletteRef = useRef(
+  //   colorPalettes[Math.floor(Math.random() * colorPalettes.length)]
+  // );
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const dpr = window.devicePixelRatio;
+    const dpr = window.devicePixelRatio + 2;
 
     const resize = () => {
       canvas.width = canvas.clientWidth * dpr;
@@ -101,7 +69,7 @@ export default function NestedRectanglesCanvas() {
     <canvas
       height={"100%"}
       width={"100%"}
-      className='block w-full h-full rounded-sm'
+      className='block w-full h-full rounded-sm opacity-80'
       ref={canvasRef}
     />
   );

@@ -11,7 +11,7 @@
 
   --coral-1: hsl(10, 100%, 65%);
 
-  --purple-1: rgb(207, 196, 254);
+  --purple-1: hsl(251, 97%, 88%);
 
   /* Theme variables */
   --base-100: var(--black-1);
