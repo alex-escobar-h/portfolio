@@ -1,16 +1,16 @@
 @import "tailwindcss";
 :root {
   /* Colors */
-  --black-1: #141414;
+  --black-1: hsl(0, 0%, 8%);
   --black-2: #0e100f;
   --black-3: hsl(0, 0%, 40%);
   --green-1: #4f7d73;
-  --white-1: #fffce1;
+  --white-1: hsl(50, 100%, 94%);
   --white-2: hsl(210, 17%, 89%);
   --white-3: hsl(210, 17%, 80%);
 
-  --gold-1: hsl(45, 100%, 68%);
-  --red-1: #df817a;
+  --red-1: hsl(4, 61%, 68%);
+  --yellow-1: hsl(50, 90%, 74%);
 
   /* Theme variables */
 
@@ -20,7 +20,7 @@
   --base-content-100: var(--white-1);
   --base-content-200: var(--white-2);
   --base-content-300: var(--white-3);
-  --accent: var(--red-1);
+  --accent: var(--yellow-1);
 }
 
 [data-theme="dark"] {
@@ -30,7 +30,7 @@
   --base-content-100: var(--black-1);
   --base-content-200: var(--black-2);
   --base-content-300: var(--black-3);
-  --accent: var(--red-1);
+  --accent: var(--yellow-1);
 }
 
 @theme {
@@ -81,8 +81,8 @@ html {
   }
 
   .py-section {
-    padding-top: clamp(4rem, 2.3529rem + 7.5294vw, 8rem);
-    padding-bottom: clamp(2rem, 1.1765rem + 3.7647vw, 4rem);
+    padding-top: clamp(6rem, 4.3529rem + 7.5294vw, 10rem);
+    padding-bottom: clamp(4rem, 2.3529rem + 7.5294vw, 8rem);
   }
 }
 

@@ -3,9 +3,10 @@ import NestedRectanglesCanvas from "./canvas/NestedRectangles";
 export default function Hero() {
   return (
     <section className='hero h-screen flex flex-col justify-between'>
-      <div>
-        <h1 className='text-4xl font-bold'>Alex Escobar</h1>
-      </div>
+      <h1 className='font-bold flex flex-col justify-center items-center flex-1 text-6xl md:text-7xl lg:text-9xl'>
+        <div>ALEXANDER</div> <div>ESCOBAR</div>
+      </h1>
+
       <div className='pb-8'>
         <div className='px-2'>
           <div

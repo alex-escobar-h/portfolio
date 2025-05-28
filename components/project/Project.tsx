@@ -8,7 +8,7 @@ export default function Project() {
       className='py-section'
     >
       <div className='container mx-auto px-2'>
-        <h2 className='text-6xl font-semibold mb-24'>Projects</h2>
+        <h2 className='text-6xl font-semibold mb-12'>Projects</h2>
         <ShowcaseLayout showcaseList={SHOWCASE_LIST} />
       </div>
     </section>

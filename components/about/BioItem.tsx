@@ -5,7 +5,7 @@ export default function BioItem({ id, title, content }: Bio) {
   return (
     <article className='flex flex-col gap-4 md:grid md:grid-cols-12'>
       {/* HR Start ----------------------- */}
-      <hr className='md:col-span-full opacity-20' />
+      <hr className='md:col-span-full opacity-10' />
       {/* HR End ------------------------- */}
 
       {/* Header Start ------------------- */}
