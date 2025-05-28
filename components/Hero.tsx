@@ -7,7 +7,7 @@ export default function Hero() {
         <div>ALEXANDER</div> <div>ESCOBAR</div>
       </h1>
 
-      <div className='pb-8'>
+      <div>
         <div className='px-2'>
           <div
             className='w-full h-full '

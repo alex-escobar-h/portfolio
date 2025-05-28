@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='py-section bg-base-200'
+      className='py-[8rem]'
     >
       <div className='container mx-auto px-2'>
         <div className='mb-12'>

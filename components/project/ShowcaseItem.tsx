@@ -18,7 +18,7 @@ export default function ShowcaseItem({
   return (
     <article className='grid grid-cols-12 gap-2 md:gap-4'>
       {/* IDX start ======================= */}
-      <span className='text-start text-xs font-mono font-light text-accent/80 lg:text-sm'>
+      <span className='text-start font-mono font-light text-accent/65'>
         ({formatID(id)})
       </span>
       {/* IDX end ========================= */}
@@ -28,14 +28,14 @@ export default function ShowcaseItem({
         {/* Header start ======================= */}
         <header className='col-span-full'>
           <h3>{title}</h3>
-          <hr className='bg-base-content-100/40' />
+          <hr className='bg-base-content-100/80' />
         </header>
         {/* Header end ========================= */}
 
         {/* Overview start ======================= */}
         <div className='col-span-full md:col-span-6 md:row-span-4'>
-          <h4 className='font-medium text-base-content-100/90'>Overview:</h4>
-          <p className='text-base-content-100/60 text-sm md:max-w-[45ch]'>
+          <h4 className='text-base-content-100/90 font-medium '>Overview:</h4>
+          <p className='text-sm md:max-w-[45ch] text-base-content-100/60'>
             {overview}
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function ShowcaseItem({
 
         {/* Stack start ========================= */}
         <div className='row-start-4 col-start-4 col-span-5 md:row-start-2 md:col-start-9'>
-          <h4 className='font-medium text-base-content-100/90 pb-1'>
+          <h4 className='text-base-content-100/90 font-medium pb-1'>
             Tech Stack:
           </h4>
           <ul className='flex gap-2 flex-wrap'>
@@ -51,7 +51,7 @@ export default function ShowcaseItem({
             {normalizedStack.map((stk, idx) => (
               <li
                 key={idx}
-                className='text-base-100/80 text-sm px-1 py-0.5 rounded-xs bg-accent/80'
+                className='text-sm px-1 py-0.5 rounded-xs font-medium bg-accent text-base-200/80'
               >
                 {stk}
               </li>
@@ -62,7 +62,7 @@ export default function ShowcaseItem({
 
         {/* Preview start ======================= */}
         <div className='row-start-4 col-start-1 col-span-3 md:row-start-4 md:col-start-9 md:col-span-3'>
-          <h4 className='text-base-content-100/90'>Preview:</h4>
+          <h4 className='text-base-content-100/90 '>Preview:</h4>
           <ul className='flex gap-x-2'>
             {links.map((link, idx) => (
               <li key={idx}>
@@ -70,7 +70,7 @@ export default function ShowcaseItem({
                   href={link.url}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-sm text-base-content-100/70'
+                  className='text-sm text-base-content-100/75'
                 >
                   <span className='underline underline-offset-2'>
                     {link.label}

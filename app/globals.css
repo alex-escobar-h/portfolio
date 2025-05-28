@@ -1,36 +1,36 @@
 @import "tailwindcss";
 :root {
   /* Colors */
-  --black-1: hsl(0, 0%, 8%);
-  --black-2: #0e100f;
-  --black-3: hsl(0, 0%, 40%);
-  --green-1: #4f7d73;
-  --white-1: hsl(50, 100%, 94%);
-  --white-2: hsl(210, 17%, 89%);
+  --black-1: hsl(240, 5%, 15%);
+  --black-2: hsl(240, 5%, 9%);
+  --black-3: hsl(0, 0%, 8%);
+
+  --white-1: hsl(54, 100%, 92%);
+  --white-2: hsl(240, 5%, 90%);
   --white-3: hsl(210, 17%, 80%);
 
-  --red-1: hsl(4, 61%, 68%);
-  --yellow-1: hsl(50, 90%, 74%);
+  --coral-1: hsl(10, 100%, 65%);
+
+  --purple-1: rgb(207, 196, 254);
 
   /* Theme variables */
-
   --base-100: var(--black-1);
   --base-200: var(--black-2);
   --base-300: var(--black-3);
   --base-content-100: var(--white-1);
   --base-content-200: var(--white-2);
   --base-content-300: var(--white-3);
-  --accent: var(--yellow-1);
+  --accent: var(--coral-1);
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   --base-100: var(--white-1);
   --base-200: var(--white-2);
   --base-300: var(--white-3);
   --base-content-100: var(--black-1);
   --base-content-200: var(--black-2);
   --base-content-300: var(--black-3);
-  --accent: var(--yellow-1);
+  --accent: var(--purple-1);
 }
 
 @theme {

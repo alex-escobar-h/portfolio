@@ -9,7 +9,8 @@ export default function Footer() {
       className='pt-section'
     >
       {/* Email ================ */}
-      <div className='container mx-auto px-2 '>
+      <hr />
+      <div className='container mx-auto px-2 pt-16'>
         <div className='mb-4'>
           <h3 className=''>Feel free to reach out to me</h3>
           <a
@@ -35,7 +36,7 @@ export default function Footer() {
                   href={link.href}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='font-light text-base-content-100/70'
+                  className='font-light text-base-content-100/75'
                 >
                   <span className='underline underline-offset-2'>
                     {link.title}
