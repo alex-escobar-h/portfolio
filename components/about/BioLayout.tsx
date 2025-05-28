@@ -6,7 +6,7 @@ type BioLayoutProps = {
 };
 export default function BioLayout({ bioList }: BioLayoutProps) {
   return (
-    <div>
+    <div className='gap-layout'>
       {bioList.map((bio) => (
         <BioItem
           key={`${bio.id}${bio.title}`}

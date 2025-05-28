@@ -6,7 +6,7 @@ type ShowcaseLayoutProps = {
 };
 export default function ShowcaseLayout({ showcaseList }: ShowcaseLayoutProps) {
   return (
-    <div>
+    <div className='gap-layout'>
       {showcaseList.map((sc) => (
         <ShowcaseItem
           key={`${sc.id}${sc.title}`}
