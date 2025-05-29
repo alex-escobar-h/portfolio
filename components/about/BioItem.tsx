@@ -33,15 +33,16 @@ export default function BioItem({ id, title, content }: Bio) {
         {
           scaleX: 1,
           transformOrigin: "left",
+          ease: "power2.out",
         }
       )
         .fromTo(
           content.lines,
           {
             opacity: 0,
-            y: 20,
+            y: 25,
           },
-          { opacity: 0.8, y: 0, stagger: 0.05 }
+          { opacity: 0.8, y: 0, stagger: 0.1, ease: "power2.out" }
         )
         .fromTo(
           ".bio-header",
@@ -49,7 +50,7 @@ export default function BioItem({ id, title, content }: Bio) {
             opacity: 0,
             y: 20,
           },
-          { opacity: 0.8, y: 0 },
+          { opacity: 0.8, y: 0, ease: "power2.out" },
           "<"
         );
     },
