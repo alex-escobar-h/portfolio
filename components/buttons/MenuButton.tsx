@@ -57,7 +57,7 @@ export default function MenuButton() {
     <>
       <button
         ref={menuBtnRef}
-        className='w-6 h-2 relative cursor-pointer z-10 md:hidden'
+        className='w-6 h-2 relative cursor-pointer z-10 block sm:hidden'
         onClick={toggleMenuButton}
       >
         <div className='line line-1 w-full h-px bg-base-content-100 absolute top-0' />
