@@ -1,12 +1,49 @@
+"use client";
+import { useRef } from "react";
+
 import { EXTERNAL_LINK_LIST } from "@/utils/data";
-import React from "react";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 export default function Footer() {
   const [email, ...externalLinks] = EXTERNAL_LINK_LIST;
+  const footerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      if (!footerRef.current) return;
+      const title = SplitText.create(".contact-title", {
+        type: "chars, lines",
+        mask: "lines",
+      });
+
+      gsap.fromTo(
+        title.chars,
+        { y: 300 },
+        {
+          y: 0,
+          ease: "back.out",
+          stagger: 0.08,
+          duration: 0.7,
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "90% bottom",
+          },
+        }
+      );
+    },
+    { scope: footerRef }
+  );
   return (
-    <section
+    <footer
+      ref={footerRef}
       id='contact'
-      className='pt-section'
+      className='pt-section bg-base-200'
     >
       {/* Email ================ */}
       <hr />
@@ -52,11 +89,14 @@ export default function Footer() {
 
       {/* Titles ================ */}
       <div className='text-center font-semibold overflow-hidden'>
-        <h2 style={{ fontSize: "clamp(4rem, -0.9412rem + 22.5882vw, 16rem)" }}>
+        <h2
+          className='contact-title overflow-hidden'
+          style={{ fontSize: "clamp(4rem, -0.9412rem + 22.5882vw, 16rem)" }}
+        >
           Contact
         </h2>
       </div>
       {/* Titles ================ */}
-    </section>
+    </footer>
   );
 }
