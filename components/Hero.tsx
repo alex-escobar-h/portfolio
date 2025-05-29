@@ -1,32 +1,38 @@
 import NestedRectanglesCanvas from "./canvas/NestedRectangles";
+import { Accent } from "./Accent";
 
 export default function Hero() {
   return (
-    <section className='hero h-screen flex flex-col justify-between'>
-      <div className='flex-1 flex flex-col justify-end h-full'>
+    <section
+      id='home'
+      className='hero h-svh flex flex-col justify-between'
+    >
+      <div className='container mx-auto flex-1 mt-20 px-4'>
         <h1
           className='font-bold text-6xl'
           style={{
             fontSize: "clamp(3rem, 0.9412rem + 9.4118vw, 8rem)",
-            marginBottom: "clamp(6rem, 7.2353rem + -5.6471vw, 3rem)",
           }}
         >
-          <div>ALEXANDER</div>
-          <div className='relative w-fit'>
-            ESCOBAR
-            <span
-              className='absolute -right-1/10 -top-1/10 text-accent animate-pulse'
+          <div>Alexander</div>
+          <div className='w-fit'>
+            Escobar
+            <Accent
+              className='animate-pulse inline-block'
               style={{
                 fontSize: "clamp(2.5rem, 0.6471rem + 8.4706vw, 7rem)",
               }}
             >
               *
-            </span>
+            </Accent>
           </div>
         </h1>
       </div>
+      <div className='px-4 py-2 bg-base-200 uppercase font-semibold text-sm'>
+        Aspiring web developer
+      </div>
 
-      <div className='py-8'>
+      <div className='pb-4'>
         <div
           className='w-full h-full'
           style={{
