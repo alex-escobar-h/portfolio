@@ -5,20 +5,22 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='hero h-svh flex flex-col justify-between'
+      className='hero bg-base-100 h-svh flex flex-col justify-between scroll-mt-[1000svh]'
     >
-      <div className='container mx-auto flex-1 mt-20 px-4'>
+      <div className='flex-1 mt-18 md:mt-22 lg:mt-20 px-4'>
         <h1
-          className='font-bold text-6xl'
+          className='font-medium'
           style={{
             fontSize: "clamp(3rem, 0.9412rem + 9.4118vw, 8rem)",
+            lineHeight: 1,
           }}
         >
           <div>Alexander</div>
-          <div className='w-fit'>
+          <div>
             Escobar
             <Accent
-              className='animate-pulse inline-block'
+              as='div'
+              className='animate-pulse inline-block px-4'
               style={{
                 fontSize: "clamp(2.5rem, 0.6471rem + 8.4706vw, 7rem)",
               }}
@@ -28,13 +30,18 @@ export default function Hero() {
           </div>
         </h1>
       </div>
-      <div className='px-4 py-2 bg-base-200 uppercase font-semibold text-sm'>
-        Aspiring web developer
-      </div>
 
       <div className='pb-4'>
+        <div className='flex justify-between p-2 bg-base-200'>
+          <span className='text-[12px] font-light'>CS Grad Student</span>
+          <span className='text-[12px] font-light'>
+            Based in Sacramento ,Ca
+          </span>
+          <span className='text-[12px] font-light'>Aspiring Dev</span>
+        </div>
+
         <div
-          className='w-full h-full'
+          className='w-full h-full overflow-hidden'
           style={{
             height: "clamp(30vh, 10vw + 20vh, 50vh)",
           }}
