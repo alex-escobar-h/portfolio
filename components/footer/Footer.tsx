@@ -24,12 +24,12 @@ export default function Footer() {
 
       gsap.fromTo(
         title.chars,
-        { y: 150 },
+        { y: 250 },
         {
           y: 0,
           ease: "back.out",
-          stagger: 0.08,
-          duration: 0.7,
+          stagger: 0.1,
+          duration: 1,
           scrollTrigger: {
             trigger: footerRef.current,
             start: "90% bottom",

@@ -4,13 +4,13 @@ import { useHueStore } from "@/stores/useHueStore";
 import { useEffect, useRef, useState } from "react";
 
 const generateHuePalette = (rnd: number) => [
-  `hsl(${rnd}, 60%, 65%)`,
   `hsl(${rnd}, 60%, 58%)`,
   `hsl(${rnd}, 60%, 52%)`,
   `hsl(${rnd}, 60%, 46%)`,
   `hsl(${rnd}, 60%, 40%)`,
   `hsl(${rnd}, 60%, 35%)`,
-  `hsl(${rnd}, 60%, 13%)`,
+  `hsl(${rnd}, 60%, 23%)`,
+  `hsl(${rnd}, 60%, 7%)`,
 ];
 
 const rectangleMap = [
