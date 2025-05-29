@@ -43,14 +43,14 @@ export default function BioItem({ id, title, content }: Bio) {
         .fromTo(
           content.lines,
           { opacity: 0, y: 25 },
-          { opacity: 0.8, y: 0, stagger: 0.1 },
+          { opacity: 1, y: 0, stagger: 0.1 },
           "<0.2"
         )
 
         .fromTo(
           ".bio-header",
           { opacity: 0, y: 20 },
-          { opacity: 0.8, y: 0, ease: "back.inOut" },
+          { opacity: 1, y: 0, ease: "back.inOut" },
           "<0.1"
         );
     },
