@@ -32,10 +32,10 @@ export default function Hero() {
       </div>
 
       <div className='pb-4'>
-        <div className='flex justify-between p-2 bg-base-200'>
+        <div className='flex justify-between p-2'>
           <span className='text-[12px] font-light'>CS Grad Student</span>
           <span className='text-[12px] font-light'>
-            Based in Sacramento ,Ca
+            Based in Sacramento ,CA
           </span>
           <span className='text-[12px] font-light'>Aspiring Dev</span>
         </div>
