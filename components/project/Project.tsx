@@ -4,7 +4,7 @@ import ShowcaseLayout from "./ShowcaseLayout";
 export default function Project() {
   return (
     <section
-      id='project'
+      id='projects'
       className='py-section'
     >
       <div className='container mx-auto px-2'>
