@@ -2,15 +2,11 @@ import { NAV_LIST } from "@/utils/data";
 
 export default function DesktopMenu() {
   return (
-    <ul className='bg-base-200 rounded-xs hidden md:flex overflow-hidden'>
+    <ul className='bg-base-200 rounded-xs hidden sm:flex overflow-hidden'>
       {NAV_LIST.map((nav, idx) => (
         <li
           key={`${nav.id}${nav.title}`}
-          className={`bg-base-200/20 px-4 ${
-            idx < NAV_LIST.length - 1
-              ? "border-r-[1px] border-base-content-100/20"
-              : ""
-          }`}
+          className='px-4 transition-colors duration-300 bg-base-200 text-base-content-100 hover:bg-base-content-100 hover:text-base-200'
         >
           <a href={`#${nav.title.toLowerCase()}`}>{nav.title}</a>
         </li>
