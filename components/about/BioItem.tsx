@@ -1,4 +1,6 @@
 "use client";
+import { useRef } from "react";
+
 import type { Bio } from "@/utils/types";
 import { formatID } from "@/utils/utilFunctions";
 import { Accent } from "../Accent";
@@ -7,7 +9,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
@@ -21,37 +22,36 @@ export default function BioItem({ id, title, content }: Bio) {
         type: "lines",
         mask: "lines",
       });
-      console.log(content);
+
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: bioRef.current, start: "top 90%" },
+        scrollTrigger: {
+          trigger: bioRef.current,
+          start: "top 90%",
+        },
+        defaults: {
+          ease: "power2.out",
+          duration: 0.6,
+        },
       });
+
       tl.fromTo(
         ".bio-divider",
-        {
-          scaleX: 0,
-        },
-        {
-          scaleX: 1,
-          transformOrigin: "left",
-          ease: "power2.out",
-        }
+        { scaleX: 0 },
+        { scaleX: 1, transformOrigin: "left" }
       )
+
         .fromTo(
           content.lines,
-          {
-            opacity: 0,
-            y: 25,
-          },
-          { opacity: 0.8, y: 0, stagger: 0.1, ease: "power2.out" }
+          { opacity: 0, y: 25 },
+          { opacity: 0.8, y: 0, stagger: 0.1 },
+          "<0.2"
         )
+
         .fromTo(
           ".bio-header",
-          {
-            opacity: 0,
-            y: 20,
-          },
-          { opacity: 0.8, y: 0, ease: "power2.out" },
-          "<"
+          { opacity: 0, y: 20 },
+          { opacity: 0.8, y: 0, ease: "back.inOut" },
+          "<0.1"
         );
     },
     { scope: bioRef }
