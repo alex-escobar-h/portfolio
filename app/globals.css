@@ -11,10 +11,6 @@
   --white-2: hsl(240, 5%, 90%);
   --white-3: hsl(210, 17%, 80%);
 
-  --coral-1: hsl(15, 80%, 65%);
-
-  --purple-1: hsl(251, 97%, 88%);
-
   /* Theme variables */
   --base-100: var(--black-1);
   --base-100-alpha: var(--black-1-a);
@@ -24,17 +20,6 @@
   --base-content-100: var(--white-1);
   --base-content-200: var(--white-2);
   --base-content-300: var(--white-3);
-  --accent: var(--coral-1);
-}
-
-[data-theme="light"] {
-  --base-100: var(--white-1);
-  --base-200: var(--white-2);
-  --base-300: var(--white-3);
-  --base-content-100: var(--black-1);
-  --base-content-200: var(--black-2);
-  --base-content-300: var(--black-3);
-  --accent: var(--purple-1);
 }
 
 ::selection {
@@ -51,7 +36,7 @@
   --color-base-content-100: var(--base-content-100);
   --color-base-content-200: var(--base-content-200);
   --color-base-content-300: var(--base-content-300);
-  --color-accent: var(--accent);
+
   --color-base-200-gradient: linear-gradient(
     to right,
     var(--color-base-200) 0%,
