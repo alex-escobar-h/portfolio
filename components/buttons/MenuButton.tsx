@@ -50,7 +50,12 @@ export default function MenuButton() {
   useEffect(() => {
     const tl = tlRef.current;
     if (!tl) return;
-    clicked ? tl.play() : tl.reverse();
+
+    if (clicked) {
+      tl.play();
+    } else {
+      tl.reverse();
+    }
   }, [clicked]);
 
   return (

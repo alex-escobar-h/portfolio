@@ -16,7 +16,7 @@ type MobileMenuProps = {
   handleNavClick: () => void;
 };
 export default function MobileMenu({ handleNavClick }: MobileMenuProps) {
-  const [_, ...externalList] = EXTERNAL_LINK_LIST;
+  const [, ...externalList] = EXTERNAL_LINK_LIST;
   const updatedNavlist = [{ id: 4, title: "Home" }, ...NAV_LIST];
   const mobileMenuRef = useRef(null);
 
