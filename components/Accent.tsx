@@ -23,8 +23,8 @@ export function Accent<C extends React.ElementType = "span">({
 
   const appliedStyle =
     variant === "background"
-      ? { backgroundColor: `hsl(${hue}, 80%, 25%)` }
-      : { color: `hsl(${hue}, 60%, 45%)` };
+      ? { backgroundColor: `hsl(${hue}, 27%, 35%)` }
+      : { color: `hsl(${hue}, 100%, 75%)` };
 
   useEffect(() => {
     if (hue === null) {
