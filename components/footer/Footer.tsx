@@ -24,7 +24,7 @@ export default function Footer() {
 
       gsap.fromTo(
         title.chars,
-        { y: 300 },
+        { y: 150 },
         {
           y: 0,
           ease: "back.out",
@@ -39,11 +39,12 @@ export default function Footer() {
     },
     { scope: footerRef }
   );
+
   return (
     <footer
       ref={footerRef}
       id='contact'
-      className='pt-section bg-base-200'
+      className='pt-section'
     >
       {/* Email ================ */}
       <hr />
@@ -65,7 +66,7 @@ export default function Footer() {
 
         {/* Links ================ */}
         <div>
-          <h3 className=''>Find me at</h3>
+          <h3>Find me at</h3>
           <ul>
             {externalLinks.map((link) => (
               <li key={link.id}>
