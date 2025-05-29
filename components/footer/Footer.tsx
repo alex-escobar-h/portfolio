@@ -46,12 +46,6 @@ export default function Footer() {
       className='pt-section border-b-8 sm:border-b-[0.75rem] md:border-b-[1.5rem] lg:border-b-[2rem] bg-base-100 h-screen flex flex-col justify-end sticky bottom-0 left-0'
     >
       <div>
-        <div className='space-y-4'>
-          <hr />
-          <hr />
-          <hr />
-          <hr />
-        </div>
         <div>
           {/* Email ================ */}
 
