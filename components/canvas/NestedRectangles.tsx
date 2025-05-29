@@ -1,16 +1,16 @@
 "use client";
-import { useEffect, useRef } from "react";
 
-const colorPalettes = [
-  [
-    "hsl(90, 5%, 65%)",
-    "hsl(90, 5%, 58%)",
-    "hsl(90, 5%, 52%)",
-    "hsl(90, 5%, 46%)",
-    "hsl(90, 5%, 40%)",
-    "hsl(90, 5%, 35%)",
-    "hsl(90, 5%, 15%)",
-  ],
+import { useHueStore } from "@/stores/useHueStore";
+import { useEffect, useRef, useState } from "react";
+
+const generateHuePalette = (rnd: number) => [
+  `hsl(${rnd}, 60%, 65%)`,
+  `hsl(${rnd}, 60%, 58%)`,
+  `hsl(${rnd}, 60%, 52%)`,
+  `hsl(${rnd}, 60%, 46%)`,
+  `hsl(${rnd}, 60%, 40%)`,
+  `hsl(${rnd}, 60%, 35%)`,
+  `hsl(${rnd}, 60%, 13%)`,
 ];
 
 const rectangleMap = [
@@ -25,23 +25,24 @@ const rectangleMap = [
 
 export default function NestedRectanglesCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const paletteRef = useRef(colorPalettes[0]);
-  // const paletteRef = useRef(
-  //   colorPalettes[Math.floor(Math.random() * colorPalettes.length)]
-  // );
+  const { hue, setHue } = useHueStore();
+  const [localHue] = useState(() => Math.floor(Math.random() * 361));
+  const finalHue = hue ?? localHue;
+
+  useEffect(() => {
+    if (hue === null) {
+      setHue(localHue);
+    }
+  }, [hue, setHue, localHue]);
+
+  const palette = generateHuePalette(finalHue);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const dpr = window.devicePixelRatio + 2;
-
-    const resize = () => {
-      canvas.width = canvas.clientWidth * dpr;
-      canvas.height = canvas.clientHeight * dpr;
-      draw();
-    };
+    const dpr = window.devicePixelRatio || 1;
 
     const draw = () => {
       const { width, height } = canvas;
@@ -52,9 +53,15 @@ export default function NestedRectanglesCanvas() {
       rectangleMap.forEach(({ idx, xFactor, yFactor }) => {
         const w = width * xFactor;
         const h = height * yFactor;
-        ctx.fillStyle = paletteRef.current[idx - 1];
+        ctx.fillStyle = palette[idx - 1];
         ctx.fillRect(centerX - w / 2, centerY - h / 2, w, h);
       });
+    };
+
+    const resize = () => {
+      canvas.width = canvas.clientWidth * dpr;
+      canvas.height = canvas.clientHeight * dpr;
+      draw();
     };
 
     resize();
@@ -63,13 +70,11 @@ export default function NestedRectanglesCanvas() {
     return () => {
       window.removeEventListener("resize", resize);
     };
-  }, []);
+  }, [palette]);
 
   return (
     <canvas
-      height={"100%"}
-      width={"100%"}
-      className='block w-full h-full rounded-sm opacity-80'
+      className='block w-full h-full rounded-sm opacity-80 animate-pulse'
       ref={canvasRef}
     />
   );

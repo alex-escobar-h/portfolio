@@ -1,5 +1,6 @@
 import type { Bio } from "@/utils/types";
 import { formatID } from "@/utils/utilFunctions";
+import { Accent } from "../Accent";
 
 export default function BioItem({ id, title, content }: Bio) {
   return (
@@ -10,9 +11,10 @@ export default function BioItem({ id, title, content }: Bio) {
 
       {/* Header Start ------------------- */}
       <header className='flex gap-4 md:gap-0 md:grid md:grid-cols-subgrid md:row-start-2 md:col-start-1 md:col-span-3'>
-        <span className='text-start font-mono font-light md:col-start-1 md:col-span-1 text-accent/65'>
+        <Accent className='text-start font-mono font-light md:col-start-1 md:col-span-1 '>
           ({formatID(id)})
-        </span>
+        </Accent>
+
         <h3 className='md:grid md:col-start-2 md:col-span-4 md:row-start-1'>
           {title}
         </h3>

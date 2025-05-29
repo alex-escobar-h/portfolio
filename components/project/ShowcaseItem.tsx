@@ -1,5 +1,6 @@
 import { Showcase } from "@/utils/types";
 import { formatID } from "@/utils/utilFunctions";
+import { Accent } from "../Accent";
 
 export default function ShowcaseItem({
   id,
@@ -18,9 +19,10 @@ export default function ShowcaseItem({
   return (
     <article className='grid grid-cols-12 gap-2 md:gap-4'>
       {/* IDX start ======================= */}
-      <span className='text-start font-mono font-light text-accent/65'>
+      <Accent className='text-start font-mono font-light'>
         ({formatID(id)})
-      </span>
+      </Accent>
+
       {/* IDX end ========================= */}
 
       {/* CONTENT container =============== */}
@@ -42,19 +44,21 @@ export default function ShowcaseItem({
         {/* Overview end ========================= */}
 
         {/* Stack start ========================= */}
-        <div className='row-start-4 col-start-4 col-span-5 md:row-start-2 md:col-start-9'>
+        <div className='row-start-4 col-start-5 col-span-6 md:row-start-2 md:col-start-9'>
           <h4 className='text-base-content-100/90 font-medium pb-1'>
             Tech Stack:
           </h4>
           <ul className='flex gap-2 flex-wrap'>
             {/* TODO: BG color */}
             {normalizedStack.map((stk, idx) => (
-              <li
+              <Accent
                 key={idx}
-                className='text-sm px-1 py-0.5 rounded-xs font-medium bg-accent text-base-200/80'
+                as='li'
+                className='text-sm px-1 py-0.5 rounded-xs font-medium text-base-content-100/80'
+                variant='background'
               >
                 {stk}
-              </li>
+              </Accent>
             ))}
           </ul>
         </div>
