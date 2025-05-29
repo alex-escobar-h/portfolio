@@ -5,7 +5,7 @@ export default function Footer() {
   const [email, ...externalLinks] = EXTERNAL_LINK_LIST;
   return (
     <section
-      id='Footer'
+      id='contact'
       className='pt-section'
     >
       {/* Email ================ */}
