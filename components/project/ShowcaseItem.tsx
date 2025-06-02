@@ -128,7 +128,7 @@ export default function ShowcaseItem({
         {/* Stack end ========================= */}
 
         {/* Preview start ======================= */}
-        <div className='row-start-4 col-start-1 col-span-3 md:row-start-4 md:col-start-9 md:col-span-3'>
+        <div className='row-start-4 col-start-1 col-span-4 md:row-start-4 md:col-start-9 md:col-span-3'>
           <h4 className='sc-subtitle text-base-content-100/90 '>Preview:</h4>
           <ul className='flex gap-x-2 overflow-hidden'>
             {links.map((link, idx) => (
