@@ -25,7 +25,7 @@ export const BIO_LIST: Bio[] = [
     id: 1,
     title: "Education",
     content:
-      "I studied computer science at Sacramento State, where I earned my bachelor's in 2023. Now I'm working on my master's at Chico State, aiming to graduate by the end of 2026.",
+      "I earned my bachelor's degree in Computer Science from California State University, Sacramento in 2023. I'm now pursuing my master's degree in Computer Science at California State University, Chico with plans to graduate by the end of 2026.",
   },
   {
     id: 2,

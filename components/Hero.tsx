@@ -35,7 +35,7 @@ export default function Hero() {
         <div className='flex justify-between p-2'>
           <span className='text-[12px] font-light'>CS Grad Student</span>
           <span className='text-[12px] font-light'>
-            Based in Sacramento ,CA
+            Based in Sacramento, CA
           </span>
           <span className='text-[12px] font-light'>Aspiring Dev</span>
         </div>

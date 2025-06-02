@@ -66,7 +66,7 @@ export default function BioItem({ id, title, content }: Bio) {
       {/* HR End ------------------------- */}
 
       {/* Header Start ------------------- */}
-      <header className='bio-header flex gap-4 md:gap-0 md:grid md:grid-cols-subgrid md:row-start-2 md:col-start-1 md:col-span-3 overflow-hidden'>
+      <header className='bio-header flex gap-4 md:gap-0 md:grid md:grid-cols-subgrid md:row-start-2 md:col-start-1 md:col-span-5 overflow-hidden'>
         <Accent className='bio-id text-start font-mono font-light md:col-start-1 md:col-span-1 '>
           ({formatID(id)})
         </Accent>

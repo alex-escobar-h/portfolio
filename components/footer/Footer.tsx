@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className='pt-section border-b-8 sm:border-b-[0.75rem] md:border-b-[1.5rem] lg:border-b-[2rem] bg-base-100 h-screen flex flex-col justify-end sticky bottom-0 left-0'
+      className='pt-section h-screen flex flex-col justify-end sticky bottom-0 left-0 bg-base-100'
     >
       <div>
         <div>

@@ -16,7 +16,7 @@ export default function Home() {
       <div className='relative'>
         <main
           id='main'
-          className='relative z-20 bg-base-100 pb-48'
+          className='relative z-20 bg-base-100 pb-48 border-t-4 border-b-4'
         >
           <About />
           <Project />
