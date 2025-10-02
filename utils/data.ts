@@ -3,6 +3,14 @@ import type { Showcase, NavList, Bio } from "./types";
 export const SHOWCASE_LIST: Showcase[] = [
   {
     id: 1,
+    title: "Facial Expression Recognition Model",
+    stack: "Python",
+    repo: "https://github.com/alex-escobar-h/Facial-Expression-Recognition-Model",
+    overview:
+      "Developed a custom Convolutional Neural Network (CNN) to classify facial expressions using the FER-2013 dataset (7 emotion classes, 30K+ images). Implemented data preprocessing, normalization, and augmentation techniques to handle class imbalance and improve model generalization. Performed hyperparameter tuning across optimizers, batch sizes, and epochs, achieving a peak test accuracy of 61.76%.",
+  },
+  {
+    id: 2,
     title: "TwentyFortyEight",
     stack: ["React", "TypeScript", "CSS"],
     repo: "https://github.com/alex-escobar-h/2048-clone",
@@ -11,7 +19,7 @@ export const SHOWCASE_LIST: Showcase[] = [
       "My rendition of the popular 2048 puzzle game created using React, Typescript, and CSS. 2048 is a single-player sliding tile puzzle game in which the objective is to combine numbered tiles on a 4x4 grid to create a tile with the number 2048. When two tiles with the same number collide, they merge into one with double the value. The game continues until the player creates the 2048 tile or no more valid moves are possible.",
   },
   {
-    id: 2,
+    id: 3,
     title: "Media Search",
     stack: "C++",
     repo: "https://github.com/alex-escobar-h/masters-program/tree/main/media-search-system",
